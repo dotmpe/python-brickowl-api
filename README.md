@@ -1,2 +1,2 @@
-# python-bricklink-api
-Wrapper for the Bricklink API (v1)
+# python-brickowl-api
+Wrapper for the BrickOwl API (v1)
