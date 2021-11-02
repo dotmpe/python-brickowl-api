@@ -8,9 +8,14 @@ class OrderMethods(APIEndpoint):
     def __init__(self, api):
         super(OrderMethods, self).__init__(api, "order")
 
-    def list(self):
+    def list(self, status=None, orderTime=None, limit=None, listType=None):
         url = '{0}/list'.format(self.endpoint)
         data = {}
+
+        if status: data['status'] = status
+        if orderTime: data['order_time'] = orderTime
+        if limit: data['limit'] = limit
+        if listType: data['list_type'] = listType
 
         status, headers, respJson = self.api.get(url, data)
         if status in [400, 401, 403, 404, 405, 415, 422]: return OrderList().parseError(respJson)
