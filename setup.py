@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
   name = 'python-brickowl-api',         
   packages=['brickowl', 'brickowl.models', 'brickowl.constants', 'brickowl.endpoints'],
-  version = '0.3.0',
+  version = '0.1.0',
   license='GPL-3.0-or-later',
   description = 'Wrapper for the BrickOwl API (v1)',
   long_description=long_description,
