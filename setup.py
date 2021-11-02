@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
   name = 'python-brickowl-api',         
   packages=['brickowl', 'brickowl.models', 'brickowl.constants', 'brickowl.endpoints'],
-  version = '0.1.0',
+  version = '0.1.1',
   license='GPL-3.0-or-later',
   description = 'Wrapper for the BrickOwl API (v1)',
   long_description=long_description,
@@ -17,7 +17,7 @@ setup(
   author = 'Alexander Schillemans',
   author_email = 'alexander.schillemans@lhs.global',
   url = 'https://github.com/alexanderlhsglobal/python-brickowl-api',
-  download_url = 'https://github.com/alexanderlhsglobal/python-brickowl-api/archive/refs/tags/0.1.0.tar.gz',
+  download_url = 'https://github.com/alexanderlhsglobal/python-brickowl-api/archive/refs/tags/0.1.1.tar.gz',
   keywords = ['brickowl', 'brick', 'owl', 'brick owl', 'lego', 'api'],
   install_requires=[
           'requests',
