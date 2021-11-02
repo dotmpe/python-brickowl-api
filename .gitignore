@@ -1,0 +1,9 @@
+brickowl/tests/
+tests/
+brickowl/__pycache__/
+__pycache__/
+brickowl/cache/*
+!brickowl/cache/__init__.py
+dist/
+Pipfile.lock
+python_brickowl_api.egg-info/*
