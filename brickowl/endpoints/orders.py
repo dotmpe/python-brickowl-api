@@ -55,7 +55,7 @@ class OrderMethods(APIEndpoint):
 
         status, headers, respJson = self.api.post(url, data)
         if status in [400, 401, 403, 404, 405, 415, 422]: return False
-
+        
         return True
 
     def setStatus(self, id, statusId):
@@ -63,7 +63,11 @@ class OrderMethods(APIEndpoint):
         url = '{0}/set_status'.format(self.endpoint)
         data = { 'order_id' : id, 'status_id' : statusId }
 
-        status, headers, respJson = self.api.post(url, data)
+        headers = {
+            'Content-Type' : 'application/x-www-form-urlencoded',
+        }
+
+        status, headers, respJson = self.api.post(url, data, headers)
         if status in [400, 401, 403, 404, 405, 415, 422]: return False
 
         return True

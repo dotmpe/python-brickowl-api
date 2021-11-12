@@ -38,8 +38,8 @@ class BrickOwlAPI:
         if method == 'GET':
             response = requests.get(reqUrl, params=data, headers=headers)
         elif method == 'POST':
-            if files: response = requests.post(reqUrl, data=json.dumps(data), files=files, headers=headers)
-            else: response = requests.post(reqUrl, data=json.dumps(data), headers=headers)
+            if files: response = requests.post(reqUrl, data=data, files=files, headers=headers)
+            else: response = requests.post(reqUrl, data=data, headers=headers)
         elif method == 'PUT':
             response = requests.put(reqUrl, data=json.dumps(data), headers=headers)
         elif method == 'DELETE':
